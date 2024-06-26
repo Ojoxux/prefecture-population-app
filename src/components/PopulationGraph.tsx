@@ -18,7 +18,7 @@ const PopulationGraph: React.FC<PopulationGraphProps> = ({ data }) => {
 
   const formattedData = data[0]?.data.map((item) => ({
     year: item.year,
-    ...data.reduce((acc, prefecture, index) => {
+    ...data.reduce((acc, prefecture) => {
       acc[prefecture.prefName] = prefecture.data.find((d) => d.year === item.year)?.value || 0;
       return acc;
     }, {} as { [key: string]: number }),
