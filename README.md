@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# 都道府県別人口推移グラフ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+このプロジェクトは、RESAS API を使用して日本の都道府県別の人口推移をグラフで表示する React アプリケーションです。
 
-Currently, two official plugins are available:
+## 機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 都道府県一覧の表示
+- 選択した都道府県の人口推移グラフの表示
+- レスポンシブデザイン
 
-## Expanding the ESLint configuration
+## 使用技術
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Recharts
+- Axios
+- ESLint
+- Prettier
+- Jest
 
-- Configure the top-level `parserOptions` property like this:
+## セットアップ
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. リポジトリをクローンします。
+2. `npm install` を実行して依存関係をインストールします。
+3. RESAS API の API キーを取得し、`.env.local` ファイルに以下のように記述します：
+4. `npm start` を実行してローカル開発サーバーを起動します。
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## テスト
+
+`npm test` を実行してユニットテストを実行します。
+
+## ビルドとデプロイ
+
+1. `npm run build` を実行してプロダクションビルドを作成します。
+2. Netlify または他の静的ホスティングサービスにデプロイします。
